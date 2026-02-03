@@ -1,0 +1,586 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow Pro</title>
+    <style>
+      :root {
+        --primary: #ffd93d;
+        --bg-gradient: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        --glass: rgba(255, 255, 255, 0.7);
+        --border: rgba(255, 255, 255, 0.3);
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg-gradient);
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #333;
+        font-weight: 600;
+      }
+
+      /* Task Card Styling */
+      .task-card {
+        background: var(--glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        transition: all 0.3s ease;
+        animation: slideIn 0.5s ease-out forwards;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .task-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
+      }
+
+      /* Status Badges */
+      .badge {
+        font-size: 12px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .pending {
+        background: #fff3cd;
+        color: #856404;
+      }
+      .in-progress {
+        background: #cce5ff;
+        color: #004085;
+      }
+
+      /* Buttons */
+      .btn-group {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+      }
+
+      .btn-update {
+        background: #333;
+        color: white;
+      }
+      .btn-delete {
+        background: #ff4d4d;
+        color: white;
+      }
+
+      .add-task-btn {
+        width: 100%;
+        padding: 15px;
+        background: var(--primary);
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(255, 217, 61, 0.4);
+      }
+
+      .add-task-btn:active {
+        transform: scale(0.98);
+      }
+
+      /* Animations */
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .completed-text {
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span style="font-size: 24px">📋</span>
+        <h1>TaskFlow</h1>
+      </header>
+
+      <div id="task-list">
+        <div class="task-card">
+          <div style="display: flex; justify-content: space-between">
+            <strong>Review project proposal</strong>
+            <span style="color: #888; font-size: 12px">flag</span>
+          </div>
+          <p style="color: #555; font-size: 14px; margin: 8px 0">
+            Go through the Q1 project proposal and provide feedback.
+          </p>
+          <span class="badge pending">Pending</span>
+          <div class="btn-group">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-update">Update</button>
+          </div>
+        </div>
+
+        <div class="task-card">
+          <div style="display: flex; justify-content: space-between">
+            <strong>Buy groceries</strong>
+            <span style="color: #888; font-size: 12px">flag</span>
+          </div>
+          <p style="color: #555; font-size: 14px; margin: 8px 0">
+            Milk, eggs, bread, vegetables
+          </p>
+          <span class="badge in-progress">In-Progress</span>
+          <div class="btn-group">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-update">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="add-task-btn" onclick="addTask()">+ Add New Task</button>
+    </div>
+
+    <script>
+      function addTask() {
+        const list = document.getElementById("task-list");
+        const newCard = document.createElement("div");
+        newCard.className = "task-card";
+        newCard.innerHTML = `
+            <div style="display: flex; justify-content: space-between;">
+                <strong>New Task</strong>
+                <span style="color: #888; font-size: 12px;">flag</span>
+            </div>
+            <p style="color: #555; font-size: 14px; margin: 8px 0;">New task description added via JS.</p>
+            <span class="badge pending">Pending</span>
+            <div class="btn-group">
+                <button class="btn-delete" onclick="this.parentElement.parentElement.remove()">Delete</button>
+                <button class="btn-update">Update</button>
+            </div>
+        `;
+        list.appendChild(newCard);
+      }
+    </script>
+  </body>
+</html> -->
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Dashboard</title>
+    <style>
+        * { box-sizing: border-box; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        
+        body {
+            margin: 0;
+            display: flex;
+            background: #f0f2f5;
+            font-family: 'Inter', sans-serif;
+            color: #2d3436;
+            height: 100vh;
+        }
+
+        /* Sidebar Sidebar */
+        nav {
+            width: 80px;
+            background: #fff;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 30px;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            background: #eee;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .nav-icon:hover { background: #FFD93D; transform: scale(1.1); }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        /* Bento Grid Layout */
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* The Card - Soft UI Style */
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+            transform: scale(0.98);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .category-tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #6c5ce7;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 15px 0 10px 0;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #636e72;
+            line-height: 1.4;
+        }
+
+        /* Animation: Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: #FFD93D;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(255, 217, 61, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .fab:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        /* Completion Checkmark Animation */
+        .check-container {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #dfe6e9;
+            border-radius: 50%;
+        }
+
+        .card:hover .check-container {
+            border-color: #00b894;
+            background: #55efc4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-icon"></div>
+        <div class="nav-icon" style="background: #FFD93D;"></div>
+        <div class="nav-icon"></div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>My Projects</h1>
+            <div style="color: #636e72;">February 2026</div>
+        </header>
+
+        <div class="task-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="category-tag">Design</span>
+                    <div class="check-container"></div>
+                </div>
+                <div>
+                    <div class="card-title">Review UI Assets</div>
+                    <p class="card-desc">Check the new glassmorphism icons for the mobile app.</p>
+                </div>
+            </div>
+
+            <div class="card" style="background: #333; color: white;">
+                <div class="card-header">
+                    <span class="category-tag" style="background: #ff7675;">Urgent</span>
+                    <div class="check-container" style="border-color: #555;"></div>
+                </div>
+                <div>
+                    <div class="card-title">Fix Login Bug</div>
+                    <p class="card-desc" style="color: #aaa;">Firebase auth is returning 404 on staging.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="category-tag" style="background: #00cec9;">Health</span>
+                    <div class="check-container"></div>
+                </div>
+                <div>
+                    <div class="card-title">Morning Workout</div>
+                    <p class="card-desc">45 mins cardio and stretching.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="fab">+</button>
+
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Neon</title>
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card-bg: #161b22;
+            --accent: #79c0ff;
+            --neon-green: #3fb950;
+            --border: #30363d;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #c9d1d9;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .kanban-board {
+            display: flex;
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+
+        .column {
+            background: rgba(22, 27, 34, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            min-width: 300px;
+            padding: 15px;
+        }
+
+        .column-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+        /* Task Card with Neon Border */
+        .task-node {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            cursor: grab;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .task-node:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(121, 192, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        /* The "Breathing" Animation for Urgent Tasks */
+        .urgent {
+            border-left: 4px solid #f85149;
+            animation: breathe 2s infinite ease-in-out;
+        }
+
+        @keyframes breathe {
+            0% { box-shadow: 0 0 5px rgba(248, 81, 73, 0.1); }
+            50% { box-shadow: 0 0 20px rgba(248, 81, 73, 0.4); }
+            100% { box-shadow: 0 0 5px rgba(248, 81, 73, 0.1); }
+        }
+
+        .task-tag {
+            font-size: 11px;
+            background: #21262d;
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            color: var(--accent);
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #484f58;
+        }
+
+        /* custom scrollbar */
+        ::-webkit-scrollbar { height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+    </style>
+</head>
+<body>
+
+<div class="kanban-board">
+    <div class="column">
+        <div class="column-header">
+            <div class="dot" style="background: var(--accent);"></div>
+            TO DO <span>3</span>
+        </div>
+        
+        <div class="task-node urgent">
+            <div style="font-weight: bold; margin-bottom: 5px;">Database Schema</div>
+            <p style="font-size: 13px; color: #8b949e; margin: 0;">Finalize the MongoDB collections for User Auth.</p>
+            <div class="footer-info">
+                <span class="task-tag">Backend</span>
+                <span>Feb 5</span>
+            </div>
+        </div>
+
+        <div class="task-node">
+            <div style="font-weight: bold; margin-bottom: 5px;">Setup Redux</div>
+            <p style="font-size: 13px; color: #8b949e; margin: 0;">Configure store and slices for global state.</p>
+            <div class="footer-info">
+                <span class="task-tag">React</span>
+                <span>Feb 10</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="column-header">
+            <div class="dot" style="background: #e3b341;"></div>
+            IN PROGRESS <span>1</span>
+        </div>
+        
+        <div class="task-node" style="border-color: #e3b341;">
+            <div style="font-weight: bold; margin-bottom: 5px;">UI Animation</div>
+            <p style="font-size: 13px; color: #8b949e; margin: 0;">Implement Framer Motion transitions.</p>
+            <div class="footer-info">
+                <span class="task-tag">CSS</span>
+                <span>Today</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="column-header">
+            <div class="dot" style="background: var(--neon-green);"></div>
+            DONE <span>12</span>
+        </div>
+        <div class="task-node" style="opacity: 0.5;">
+            <div style="font-weight: bold; text-decoration: line-through;">Project Setup</div>
+            <div class="footer-info">
+                <span class="task-tag" style="color: var(--neon-green);">Complete</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
