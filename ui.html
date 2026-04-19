@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamline | Your Ultimate To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Light Blueish-White Background */
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); 
+        }
+        
+        /* Hex Color Variables */
+        :root {
+            --primary-blue: #2563eb;
+            --hover-blue: #1d4ed8;
+            --shadow-blue: rgba(37, 99, 235, 0.2);
+            --bg-white: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+        }
+
+        .btn-blue {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+        }
+
+        .btn-blue:hover {
+            background-color: var(--hover-blue);
+        }
+
+        .border-blue {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .text-blue {
+            color: var(--primary-blue);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-2">
+            <div style="background-color: var(--primary-blue);" class="w-8 h-8 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <span style="color: var(--text-main);" class="text-xl font-bold tracking-tight">Streamline</span>
+        </div>
+        <div class="space-x-4">
+            <button class="font-semibold transition hover:opacity-70" style="color: var(--primary-blue);">Login</button>
+            <button class="btn-blue px-5 py-2 rounded-full font-semibold shadow-lg transition" style="box-shadow: 0 10px 15px -3px var(--shadow-blue);">Get Started</button>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-8 py-20 flex flex-col items-center text-center">
+        <h1 style="color: var(--text-main);" class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            Master your day, <br><span class="text-blue">one task at a time.</span>
+        </h1>
+        
+        <p style="color: var(--text-muted);" class="text-lg max-w-2xl mb-12 leading-relaxed">
+            Stop juggling tasks in your head. Our simple, intuitive interface helps you organize 
+            your life, hit your deadlines, and clear your mind. Beautifully designed for 
+            people who want to get things done.
+        </p>
+
+        <div style="background-color: var(--bg-white); border: 1px solid #dbeafe;" class="p-8 rounded-3xl shadow-2xl w-full max-w-md">
+            <h3 style="color: var(--text-main);" class="text-2xl font-bold mb-2">Ready to be productive?</h3>
+            <p style="color: #9ca3af;" class="mb-8">Join thousands of users organizing their work.</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <button class="btn-blue w-full py-4 rounded-xl font-bold text-lg transform hover:scale-[1.02] transition-all shadow-md">
+                        Sign Up for Free
+                    </button>
+                    <p style="color: #9ca3af;" class="text-sm mt-2 italic">No credit card required.</p>
+                </div>
+
+                <div class="relative flex items-center py-4">
+                    <div class="flex-grow border-t" style="border-color: #f3f4f6;"></div>
+                    <span class="flex-shrink mx-4 text-xs font-bold" style="color: #d1d5db;">OR</span>
+                    <div class="flex-grow border-t" style="border-color: #f3f4f6;"></div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <p style="color: var(--text-muted);" class="mb-2">Already have an account?</p>
+                    <button class="border-blue w-full border-2 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors" style="background-color: transparent;">
+                        Log In Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="background-color: var(--bg-white); border-color: #dbeafe;" class="mt-20 w-full max-w-4xl rounded-2xl shadow-2xl p-4 border">
+            <div style="background-color: #f8fafc; border: 2px dashed #cbd5e1;" class="rounded-xl overflow-hidden h-64 flex items-center justify-center">
+                <span style="color: #94a3b8;" class="font-medium text-lg italic">[ Interactive App Preview ]</span>
+            </div>
+        </div>
+    </main>
+
+    <footer style="color: #9ca3af;" class="py-10 text-center text-sm">
+        &copy; 2026 Streamline To-Do. Built for clarity.
+    </footer>
+
+</body>
+</html>
