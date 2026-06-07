@@ -1,0 +1,459 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center wrapper (Dark background makes your colors pop) */
+.loader-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #121214;
+}
+
+/* Base Loader Wrapper */
+.cosmic-loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem; /* 128px */
+  width: 8rem;
+}
+
+/* Outer Floating Halo (#FFFFFF) */
+.halo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  mix-blend-mode: screen;
+  animation: spin 8s linear infinite;
+}
+
+/* Middle Orbiting Ring 1 (#CECED1) */
+.ring-one {
+  position: absolute;
+  height: 6rem; /* 96px */
+  width: 6rem;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 55%;
+  border: 2px solid #CECED1;
+  opacity: 0.7;
+  animation: spin 4s linear infinite;
+}
+
+/* Middle Orbiting Ring 2 (#E2E1EE) */
+.ring-two {
+  position: absolute;
+  height: 5rem; /* 80px */
+  width: 5rem;
+  border-radius: 50% 40% 60% 40% / 50% 60% 40% 50%;
+  border: 2px solid #E2E1EE;
+  opacity: 0.8;
+  mix-blend-mode: plus-lighter;
+  animation: spin-reverse 3s linear infinite;
+}
+
+/* Inner Morphing Core (#DFDEEB) */
+.core {
+  position: absolute;
+  height: 2.5rem; /* 40px */
+  width: 2.5rem;
+  background-color: #DFDEEB;
+  border-radius: 45% 55% 50% 50% / 50% 45% 55% 45%;
+  box-shadow: 0 0 20px rgba(223, 222, 235, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Ambient Background Glow */
+.ambient-glow {
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  background-color: rgba(223, 222, 235, 0.05);
+  border-radius: 50%;
+  filter: blur(24px);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* --- ANIMATIONS --- */
+
+/* Clockwise Rotation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Counter-Clockwise Rotation */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Pulsing Core Scaling */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="cosmic-loader">
+            <div class="halo"></div>
+            
+            <div class="ring-one"></div>
+            
+            <div class="ring-two"></div>
+            
+            <div class="core"></div>
+            
+            <div class="ambient-glow"></div>
+        </div>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Cosmic Wave Loader</title>
+  <style>
+    /* Reset and Center Container */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #0F0F11; /* Ultra-dark backdrop to let the colors shine */
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    /* Loader Wrapper */
+    .loader-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Wave Track Container */
+    .wave-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      height: 80px;
+      position: relative;
+    }
+
+    /* Shared Node Styling */
+    .node {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: relative;
+      animation: fluidWave 2s ease-in-out infinite;
+    }
+
+    /* Specific Colors and Dynamic Delays */
+    .node-1 {
+      background-color: #FFFFFF;
+      animation-delay: 0.0s;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .node-2 {
+      background-color: #CECED1;
+      animation-delay: 0.2s;
+      box-shadow: 0 0 15px rgba(206, 206, 209, 0.4);
+    }
+
+    .node-3 {
+      background-color: #E2E1EE;
+      animation-delay: 0.4s;
+      box-shadow: 0 0 15px rgba(226, 225, 238, 0.4);
+    }
+
+    .node-4 {
+      background-color: #DFDEEB;
+      animation-delay: 0.6s;
+      box-shadow: 0 0 15px rgba(223, 222, 235, 0.4);
+    }
+
+    /* Connecting Fluid Shadow Matrix (Blends everything together) */
+    .wave-container::after {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 30px;
+      background: radial-gradient(ellipse, rgba(226, 225, 238, 0.15) 0%, transparent 70%);
+      filter: blur(8px);
+      animation: ambientGlow 2s ease-in-out infinite;
+    }
+
+    /* --- ANIMATIONS --- */
+    
+    /* The core fluid wave movement combining vertical shift, scaling, and morphing */
+    @keyframes fluidWave {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        border-radius: 50%;
+      }
+      25% {
+        transform: translateY(-30px) scale(1.15);
+        border-radius: 40% 40% 50% 50%; /* Morphs slightly as it reaches apex */
+      }
+      50% {
+        transform: translateY(0) scale(0.85);
+        border-radius: 50%;
+      }
+      75% {
+        transform: translateY(30px) scale(1.15);
+        border-radius: 50% 50% 40% 40%; /* Morphs slightly at the bottom */
+      }
+    }
+
+    /* Ambient pulse synced with the wave movement */
+    @keyframes ambientGlow {
+      0%, 100% {
+        transform: scaleX(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: scaleX(1.2);
+        opacity: 0.9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader-wrapper">
+    <div class="wave-container">
+      <div class="node node-1"></div>
+      <div class="node node-2"></div>
+      <div class="node node-3"></div>
+      <div class="node node-4"></div>
+    </div>
+  </div>
+
+</body>
+</html> 
+ -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetic Origami Loader</title>
+  <style>
+    /* Reset and Light Theme Canvas */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #F8F9FA; /* Premium, clean light theme background */
+    }
+
+    /* The Main Loader Structural Frame (#CECED1) */
+    .origami-loader {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      background-color: #CECED1; /* Sharp contrast against the light page */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft light-theme depth shadow */
+    }
+
+    /* Sliding Panels inside the frame */
+    .panel {
+      position: absolute;
+      inset: 0;
+      transform-origin: bottom right;
+      animation: foldSlide 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    /* Panel One (#DFDEEB) */
+    .panel-one {
+      background-color: #DFDEEB;
+      animation-delay: 0s;
+      z-index: 3;
+    }
+
+    /* Panel Two (#E2E1EE) */
+    .panel-two {
+      background-color: #E2E1EE;
+      animation-delay: 0.5s;
+      z-index: 2;
+    }
+
+    /* Panel Three (#FFFFFF) - Used strictly inside the frame for crisp edge contrast */
+    .panel-three {
+      background-color: #FFFFFF;
+      animation-delay: 1s;
+      z-index: 1;
+    }
+
+    /* --- THE MECHANISM --- */
+    /* A unique geometric fold and slide transition that runs on a loop */
+    @keyframes foldSlide {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(-100%, 0) scale(1); /* Slide out left */
+      }
+      26% {
+        transform: translate(-100%, 100%) scale(0); /* Instantly drop down & shrink out of sight */
+      }
+      50% {
+        transform: translate(0, 100%) scale(0); /* Move to the bottom center position */
+      }
+      75% {
+        transform: translate(0, 0) scale(0); /* Move back to center, still hidden */
+      }
+      80% {
+        transform: translate(0, 0) scale(1); /* Snap pop back to full size ready to cycle */
+      }
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="origami-loader">
+    <div class="panel panel-one"></div>
+    <div class="panel panel-two"></div>
+    <div class="panel panel-three"></div>
+  </div>
+
+</body>
+</html> -->
+
+
+
+<!-- import React from 'react'
+
+function CosmicLoader() {
+  return (
+    <>
+        <div className="flex flex-col items-center gap-6">
+            <div className="relative flex h-20 items-center justify-center gap-[14px]">
+                
+                <div className="h-4 w-4 rounded-full bg-[#ffffff] shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-cosmic-wave [animation-delay:0s]"></div>
+                
+                <div className="h-4 w-4 rounded-full bg-[#ffffff] shadow-[0_0_15px_rgba(206,206,209,0.4)] animate-cosmic-wave [animation-delay:0.2s]"></div>
+                
+                <div className="h-4 w-4 rounded-full bg-[#ffffff] shadow-[0_0_15px_rgba(226,225,238,0.4)] animate-cosmic-wave [animation-delay:0.4s]"></div>
+                
+                <div className="h-4 w-4 rounded-full bg-[#ffffff] shadow-[0_0_15px_rgba(223,222,235,0.4)] animate-cosmic-wave [animation-delay:0.6s]"></div>
+                
+                <div className="absolute w-[180px] h-[30px] bg-[radial-gradient(ellipse,_rgba(226,225,238,0.15)_0%,_transparent_70%)] blur-[8px] animate-cosmic-glow pointer-events-none"></div>
+            
+            </div>
+        </div>
+    </>
+  )
+}
+
+export default CosmicLoader -->
+
+
+
+
+
+<!-- /** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        'progress-loading': {
+          '0%': { width: '0%', transform: 'translateX(-10%)' },
+          '50%': { width: '70%' },
+          '100%': { width: '100%', transform: 'translateX(0%)' },
+        },
+        'cosmic-node-wave': {
+          '0%, 100%': { transform: 'translateY(0) scale(1)', borderRadius: '50%' },
+          '25%': { transform: 'translateY(-30px) scale(1.15)', borderRadius: '40% 40% 50% 50%' },
+          '50%': { transform: 'translateY(0) scale(0.85)', borderRadius: '50%' },
+          '75%': { transform: 'translateY(30px) scale(1.15)', borderRadius: '50% 50% 40% 40%' },
+        },
+        'cosmic-ambient-glow': {
+          '0%, 100%': { transform: 'scaleX(1)', opacity: '0.6' },
+          '50%': { transform: 'scaleX(1.2)', opacity: '0.9' },
+        },
+      },
+      animation: {
+        'progress-loading': 'progress-loading 3s infinite ease-in-out',
+        'cosmic-wave': 'cosmic-node-wave 2s ease-in-out infinite',
+        'cosmic-glow': 'cosmic-ambient-glow 2s ease-in-out infinite',
+      }
+    },
+  },
+  plugins: [
+    require("tailwindcss-animate")
+  ],
+} -->
