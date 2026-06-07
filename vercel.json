@@ -6,10 +6,11 @@
       "config": { "distDir": "frontend/dist" }
     }
   ],
-  "rewrites": [
+
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/static/index.html"
+      "src": "/(.*)",
+      "dest": "/static/index.html"
     }
   ]
 }
